@@ -1,0 +1,20 @@
+/data_1/software/anaconda/envs/PSENet/lib/python2.7/site-packages/torch/nn/functional.py:2457: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/data_1/software/anaconda/envs/PSENet/lib/python2.7/site-packages/torch/nn/functional.py:2539: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+None
+Using pretrained model.
+
+Epoch: [1 | 200] LR: 0.000100
+Traceback (most recent call last):
+  File "train_ocr_general_text_det.py", line 314, in <module>
+    main(args)
+  File "train_ocr_general_text_det.py", line 272, in main
+    train_loss, train_te_acc, train_ke_acc, train_te_iou, train_ke_iou = train(train_loader, model, dice_loss, optimizer, epoch)
+  File "train_ocr_general_text_det.py", line 162, in train
+    loss.backward() #反向传播求解梯度
+  File "/data_1/software/anaconda/envs/PSENet/lib/python2.7/site-packages/torch/tensor.py", line 107, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/data_1/software/anaconda/envs/PSENet/lib/python2.7/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 600.00 MiB (GPU 0; 7.93 GiB total capacity; 6.12 GiB already allocated; 526.62 MiB free; 197.51 MiB cached)
